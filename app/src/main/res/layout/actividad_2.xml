@@ -20,10 +20,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="53dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="283dp"
         android:text="Guardar"
         app:layout_constraintEnd_toEndOf="@+id/frame_mapa"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/frame_mapa"
         app:layout_constraintTop_toBottomOf="@+id/frame_mapa" />
 
@@ -32,10 +33,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="230dp"
-        android:layout_marginTop="54dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="88dp"
         android:text="Ver viajes"
         app:layout_constraintEnd_toEndOf="@+id/frame_mapa"
+        app:layout_constraintHorizontal_bias="0.052"
         app:layout_constraintStart_toStartOf="@+id/frame_mapa"
         app:layout_constraintTop_toBottomOf="@+id/frame_mapa" />
 
@@ -49,4 +51,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.174" />
+
+    <Button
+        android:id="@+id/b_dela1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="ver de la 1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_guardar" />
+
+    <Button
+        android:id="@+id/b_dela3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="ver de la 3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/b_ver_viajes"
+        app:layout_constraintTop_toBottomOf="@+id/b_ver_viajes" />
 </androidx.constraintlayout.widget.ConstraintLayout>

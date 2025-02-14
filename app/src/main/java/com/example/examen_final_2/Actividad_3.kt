@@ -79,14 +79,9 @@ class Actividad_3 : AppCompatActivity() {
 
         b_modificar.setOnClickListener {
 
-            if (db.actualizarViaje(viajeMarcado)) {
-                Toast.makeText(this, "viaje modificado con exito", Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(this, "el viaje no se ha podido modificar", Toast.LENGTH_SHORT)
-                    .show()
-            }
+
             val intetnVolverActualizar = Intent(this, Actividad_2::class.java)
-            intent.putExtra("centroexistente", centroBase)
+            intent.putExtra("centroexistenteVuelta", viajeMarcado.origen)
             startActivity(intetnVolverActualizar)
         }
 

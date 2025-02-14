@@ -24,6 +24,8 @@ class Actividad_2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.actividad_2)
 
+
+
         listadoNuevo = mutableListOf()
         // recoger el intent
         val centroBase: String = intent.getStringExtra("centroexistente").toString()
@@ -31,13 +33,26 @@ class Actividad_2 : AppCompatActivity() {
 
         // intent de vuelta
         val centroVuelta  : String = intent.getStringExtra("centroexistenteVuelta").toString()
+
+        // se recoge el centro en las prferenicas y se guarda
+        val gestorViajes = GestorViajes_previos(this)
+        gestorViajes.guardarViaje1(centroBase)
+
+        if(!gestorViajes.obetenerCentro().equals("")){
+            listadoCentros.forEach { centro ->
+                if(!centro.equals(centroBase) || !centro.equals(centroVuelta)){
+                    listadoNuevo.add(centro)
+                }
+            }
+        }
+        /*
         // añaditos distintos
         listadoCentros.forEach { centro ->
             if(!centro.equals(centroBase) || !centro.equals(centroVuelta)){
                 listadoNuevo.add(centro)
             }
         }
-
+*/
         spinnerCentros = findViewById(R.id.spinner_centros)
         val adaptador = ArrayAdapter(this, android.R.layout.simple_list_item_1, listadoNuevo )
         spinnerCentros.adapter = adaptador
@@ -59,6 +74,13 @@ class Actividad_2 : AppCompatActivity() {
 
         }
 
+        // construir el fragment del mapa
+        /*
+        val fragmentMapa = MapsFragment_actividad2()
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.frame_mapa, fragmentMapa)
+            .commit()
+        */
         val bGuardar = findViewById<Button>(R.id.b_guardar)
         val bViajes = findViewById<Button>(R.id.b_ver_viajes)
         bGuardar.setOnClickListener {
@@ -77,6 +99,16 @@ class Actividad_2 : AppCompatActivity() {
             val intentViajes= Intent(this, Actividad_3::class.java)
             intent.putExtra("centroexistenteViaje", centroBase)
             startActivity(intentViajes)
+        }
+
+        // coasa que borrar que son para `probar
+        val dela1 = findViewById<Button>(R.id.b_dela1)
+        val dela3 = findViewById<Button>(R.id.b_dela3)
+        dela1.setOnClickListener {
+            Toast.makeText(this, "de la 1 $centroBase", Toast.LENGTH_SHORT).show()
+        }
+        dela3.setOnClickListener {
+            Toast.makeText(this, "de la 1 $centroVuelta", Toast.LENGTH_SHORT).show()
         }
 
 
