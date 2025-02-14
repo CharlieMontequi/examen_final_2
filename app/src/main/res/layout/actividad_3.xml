@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/list_actividad3"
+        android:layout_width="407dp"
+        android:layout_height="183dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.005" />
+
+    <Button
+        android:id="@+id/b_borrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="155dp"
+        android:layout_marginEnd="235dp"
+        android:text="borrar"
+        app:layout_constraintEnd_toEndOf="@+id/list_actividad3"
+        app:layout_constraintStart_toStartOf="@+id/list_actividad3"
+        app:layout_constraintTop_toBottomOf="@+id/list_actividad3" />
+
+    <Button
+        android:id="@+id/b_modificar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="116dp"
+        android:text="modificar"
+        app:layout_constraintEnd_toEndOf="@+id/b_borrar"
+        app:layout_constraintStart_toStartOf="@+id/b_borrar"
+        app:layout_constraintTop_toBottomOf="@+id/b_borrar" />
+
+    <Button
+        android:id="@+id/b_volver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="234dp"
+        android:layout_marginTop="297dp"
+        android:layout_marginEnd="83dp"
+        android:text="volver"
+        app:layout_constraintEnd_toEndOf="@+id/list_actividad3"
+        app:layout_constraintStart_toStartOf="@+id/list_actividad3"
+        app:layout_constraintTop_toBottomOf="@+id/list_actividad3" />
+</androidx.constraintlayout.widget.ConstraintLayout>
